@@ -1,7 +1,10 @@
 import Route from '@ember/routing/route';
+import RSVP from 'rsvp';
 
 export default Route.extend({
     model: function() {
-        return this.store.findAll('dog');
+        return RSVP.hash({
+            dogs: this.store.findAll('dog')
+         });
     }
 });
