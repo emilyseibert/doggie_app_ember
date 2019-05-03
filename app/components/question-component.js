@@ -6,14 +6,17 @@ export default Component.extend({
     // onsubmit calls game submit(dog)
     selectedDog: null, // type Dog
 
+    didRender() {
+        this.set('selectedDog', this.get('dogs').firstObject.name);
+    },
+
     actions: {
         selectDog(dog) {
             this.set('selectedDog', dog);
         },
 
-        submit(event) {
-            console.log('event', event);
-            this.submit(event); // call parent submit function (param)
+        submit() {
+            this.submit(this.get('selectedDog')); // call parent submit function (param)
         }
     }
 });
