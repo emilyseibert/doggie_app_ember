@@ -7,6 +7,7 @@ export default Component.extend({
     selectedDog: null, // type Dog,
     score: 0,
     questions: [],
+    showEndOfGame: false,
     
     didRender() {
         // init game
@@ -32,8 +33,9 @@ export default Component.extend({
         
             // end of game (run out of questions)
             if (this.questions.length === this.get('currentDogIndex')) {
-                const percentScore = this.score / this.questions.length;
-                alert(`end of game! you got this score:  ${(percentScore * 100).toFixed(0)}%`);
+                // const percentScore = this.score / this.questions.length;
+                this.set('showEndOfGame', true);
+                //alert(`end of game! you got this score:  ${(percentScore * 100).toFixed(0)}%`);
             }
         }
     }
