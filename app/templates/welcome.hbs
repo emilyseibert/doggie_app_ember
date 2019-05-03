@@ -1,4 +1,16 @@
-<p>this is welcome</p>
+<div class="welcome-page">
+    <div class="welcome-page-container">
+        <div class="welcome-page-dog-graphic">
+            <img class="dog-graphic" src="/assets/images/dog-graphic.png" />
+        </div>
+        <div class="welcome-page-text-box-container">
+            <div class="welcome-page-text-box">
+                <div class="title">NAME THAT PUP</div>
+                <div class="subtitle">Match the puppy picture to its name</div>
+                {{#link-to 'game' tagName='button' class='lets-play'}}Let's play{{/link-to}}
+            </div>
+        </div>
+    </div>
+</div>
 
-{{link-to 'Start' 'game'}}
 {{outlet}}

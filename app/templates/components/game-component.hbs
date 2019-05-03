@@ -9,9 +9,9 @@
 {{questions.length}} --}}
 
 <p>Score correct: {{score}}/{{questions.length}}</p>
-{{question-component question=currentQuestion submit=(action 'submit') dogs=dogs}}
+{{question-component question=currentQuestion submit=(action "submit") dogs=dogs}}
 
 {{#if showEndOfGame}}
-    {{end-of-game finalScore=score numOfQuestions=questions.length}}
+  {{end-of-game finalScore=score numOfQuestions=questions.length}}
 {{/if}}
 {{yield}}
