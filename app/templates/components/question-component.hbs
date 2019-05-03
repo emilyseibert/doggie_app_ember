@@ -1,17 +1,6 @@
+<p> this is question-component</p>
 <p>What's the name of this dog?</p>
-{{question.name}}
-{{!-- <img src="https://www.akc.org/wp-content/themes/akc/component-library/assets/img/welcome.jpg"/> --}}
-{{!-- picture of the dog --}}
-{{!-- name of the dog --}}
-{{!-- name of other dogs --}}
-
-{{!-- names --}}
-{{!-- <ls> 
-    <li>answer 1</li>
-    <li>answer 2</li>
-    <li>answer 3</li>
-    <li>answer 4</li>
-</ls> --}}
+<img src={{question.picture}} />
 <select onchange={{action "selectDog" value="target.value"}}>
     {{#each dogs as |dog|}}
         <option>{{dog.name}}</option>
