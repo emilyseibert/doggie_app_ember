@@ -1,14 +1,14 @@
 
 <p>this is game-component</p>
 
-<p>currentdogi</p>
+{{!-- <p>currentdogi</p>
 {{currentDogIndex}}
 <p>currentdog name</p>
 {{currentDog.name}}
 <p>questions length</p>
-{{questions.length}}
+{{questions.length}} --}}
 
-<p>Score correct: x / {{question.length}}</p>
+<p>Score correct: x/{{questions.length}}</p>
 {{score}}
 {{question-component question=currentQuestion submit=(action 'submit') dogs=dogs}}
 {{yield}}
