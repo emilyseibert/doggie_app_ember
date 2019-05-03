@@ -12,4 +12,12 @@
     <li>answer 3</li>
     <li>answer 4</li>
 </ls> --}}
+<select onchange={{action "selectDog" value="target.value"}}>
+    {{#each dogs as |dog|}}
+        <option>{{dog.name}}</option>
+    {{/each}}
+</select>
+
+<button {{action "submit" this.selectedDog}}>Submit</button>
+{{!--  --}}
 {{yield}}

@@ -8,6 +8,7 @@
 <p>questions length</p>
 {{questions.length}}
 
-
-{{question-component question=currentQuestion}}
+<p>Score correct: x / {{question.length}}</p>
+{{score}}
+{{question-component question=currentQuestion submit=(action 'submit') dogs=dogs}}
 {{yield}}
