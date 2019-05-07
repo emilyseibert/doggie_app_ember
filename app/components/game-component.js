@@ -6,11 +6,13 @@ export default Component.extend({
     currentDogIndex: 0,
     selectedDog: null, // type Dog,
     score: 0,
-    questions: [],
+    questions: null,
     showEndOfGame: false,
     
     didRender() {
         // init game
+        this.set('questions', []);
+
         if (this.questions.length === 0) {
             // generate question
             this.set('questions', this.get('dogs'));
