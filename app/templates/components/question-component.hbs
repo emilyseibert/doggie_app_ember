@@ -1,10 +1,10 @@
 <p> this is question-component</p>
 <p>What's the name of this dog?</p>
-<img src={{question.picture}} />
+<img alt="dog pic" src={{question.picture}}>
 <select onchange={{action "selectDog" value="target.value"}}>
-    {{#each dogs as |dog|}}
-        <option>{{dog.name}}</option>
-    {{/each}}
+  {{#each dogs as |dog|}}
+    <option>{{dog.name}}</option>
+  {{/each}}
 </select>
 
 <button {{action "submit"}}>Submit</button>
