@@ -25,28 +25,23 @@ import { action } from '@ember/object';
 
 
 export default class QuestionComponent extends Component {
-    dogs = [];
-
     constructor() {
         super(...arguments);
-
-        this.selectedDog = this.dogs.firstObject ? this.dogs.firstObject.name : [];
     }
 
-    didRender() {
-        console.log('didRender');
-        // this.set('selectedDog', this.get('dogs').firstObject.name);
+    didReceiveAttrs() {
+        // set initial selection to first dog in array
+        this.set('selectedDog', this.get('dogs').firstObject.name);
     }
 
     @action
     selectDog(dog) {
-        console.log('selectDog');
+        // called whend dropdown changes
         this.set('selectedDog', dog);
     }
 
     @action
     submitQuestion() {
-        console.log('submitq');
         this.submit(this.get('selectedDog')); // call parent submit function (param)
     }
 }
