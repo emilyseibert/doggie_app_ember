@@ -3,6 +3,7 @@ module.exports = {
     server: true,
   },
   root: true,
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 2017,
     sourceType: 'module'
@@ -34,7 +35,10 @@ module.exports = {
       ],
       parserOptions: {
         sourceType: 'script',
-        ecmaVersion: 2015
+        ecmaVersion: 2015,
+        ecmaFeatures: {
+          "experimentalDecorators": true
+        }
       },
       env: {
         browser: false,

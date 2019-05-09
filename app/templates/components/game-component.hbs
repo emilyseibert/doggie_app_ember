@@ -1,17 +1,8 @@
-
-<p>this is game-component</p>
-
-{{!-- <p>currentdogi</p>
-{{currentDogIndex}}
-<p>currentdog name</p>
-{{currentDog.name}}
-<p>questions length</p>
-{{questions.length}} --}}
-
 <p>Score correct: {{score}}/{{questions.length}}</p>
-{{question-component question=currentQuestion submit=(action "submit") dogs=dogs}}
 
 {{#if showEndOfGame}}
   {{end-of-game finalScore=score numOfQuestions=questions.length}}
+{{else}}
+  {{question-component question=currentQuestion submit=(action "submit") dogs=dogs}}
 {{/if}}
 {{yield}}

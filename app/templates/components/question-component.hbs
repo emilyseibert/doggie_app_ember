@@ -1,4 +1,3 @@
-<p> this is question-component</p>
 <p>What's the name of this dog?</p>
 <img alt="dog pic" src={{question.picture}}>
 <select onchange={{action "selectDog" value="target.value"}}>
@@ -7,5 +6,5 @@
   {{/each}}
 </select>
 
-<button {{action "submit"}}>Submit</button>
+<button {{action "submitQuestion"}}>Submit</button>
 {{yield}}
