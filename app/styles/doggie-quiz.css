@@ -1,8 +1,6 @@
-/* @import "pages/welcome";
-
-
-@import "vars/colors";
-@import "vars/fonts"; */
+@import "./pages/welcome.css";
+@import "./vars/colors.css";
+@import "./vars/fonts.css";
 
 html, body {
     width: 100%;

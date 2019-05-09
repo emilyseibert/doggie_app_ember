@@ -1,6 +1,8 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const postcssImport = require('postcss-import');
+
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
@@ -12,6 +14,16 @@ module.exports = function(defaults) {
           'print': '/assets/print.css'
         }
       }
+    },
+    postcssOptions: {
+      plugins: [
+        {
+          module: postcssImport,
+          options: {
+            glob: true
+          }
+        }
+      ]
     }
   });
 
