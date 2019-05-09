@@ -4,8 +4,14 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    sassOptions: {
-      extension: 'scss'
+    outputPaths: {
+      app: {
+        html: 'index.html',
+        css: {
+          'app': '/assets/app.css',
+          'print': '/assets/print.css'
+        }
+      }
     }
   });
 
