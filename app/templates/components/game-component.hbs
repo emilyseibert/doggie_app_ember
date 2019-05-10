@@ -3,6 +3,6 @@
 {{#if showEndOfGame}}
   {{end-of-game finalScore=score numOfQuestions=questions.length}}
 {{else}}
-  {{question-component question=currentQuestion submit=(action "submit") dogs=dogs}}
+  {{question-component question=currentQuestion submit=(action "submit") answers=answers}}
 {{/if}}
 {{yield}}

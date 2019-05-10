@@ -1,11 +1,33 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const postcssImport = require('postcss-import');
+const postcssCssNext = require('postcss-cssnext');
+
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    sassOptions: {
-      extension: 'scss'
+    outputPaths: {
+      app: {
+        html: 'index.html',
+        css: {
+          'app': '/assets/app.css',
+          'print': '/assets/print.css'
+        }
+      }
+    },
+    postcssOptions: {
+      plugins: [
+        {
+          module: postcssImport,
+          options: {
+            glob: true
+          }
+        },
+        { 
+          module: postcssCssNext
+        }
+      ]
     }
   });
 

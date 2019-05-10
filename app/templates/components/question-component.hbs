@@ -1,8 +1,9 @@
 <p>What's the name of this dog?</p>
 <img alt="dog pic" src={{question.picture}}>
+<p>CHEATSHEET: {{question.name}}</p>
 <select onchange={{action "selectDog" value="target.value"}}>
-  {{#each dogs as |dog|}}
-    <option>{{dog.name}}</option>
+  {{#each answers as |answer|}}
+    <option>{{answer.name}}</option>
   {{/each}}
 </select>
 

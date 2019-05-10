@@ -30,8 +30,8 @@ export default class QuestionComponent extends Component {
     }
 
     didReceiveAttrs() {
-        // set initial selection to first dog in array
-        this.set('selectedDog', this.get('dogs').firstObject.name);
+        // set initial selection to first dog in array        
+        this.set('selectedDog', this.get('answers').firstObject.name);
     }
 
     @action
