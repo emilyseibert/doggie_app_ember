@@ -40,6 +40,9 @@
 }
 
 .title {
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
     font-family: Cabin Sketch;
     font-size: 72px;
     color: var(--color-title);
@@ -47,6 +50,8 @@
 }
 
 .subtitle {
+    margin: 0;
+    font-weight: normal;
     font-family: Avenir Next;
     font-size: 25px;
     color: var(--color-text);
