@@ -50,15 +50,16 @@ export default Component.extend({
     },
 });
 
+/**
+ * Randomize array element order in-place.
+ * Using Durstenfeld shuffle algorithm.
+ */
 function shuffle(array) {
-    // Fisher-Yates shuffle
-    var m = array.length, t, i;
-    while (m > 0) 
-    {
-        i = Math.floor(Math.random() * m--);
-        t = array[m];
-        array[m] = array[i];
-        array[i] = t;
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
     }
 
     return array;
